@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: black;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.containar {
+    position: relative;
+    height: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.color-div1 {
+    visibility: hidden;
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    height: 2px;
+    width: 35px;
+    border-radius: 50px;
+    background-color: white;
+}
+.color-div2 {
+    visibility: hidden;
+    position: absolute;
+    top: 53%;
+    left: 26%;
+    height: 2px;
+    width: 20px;
+    border-radius: 50px;
+    background-color: white;
+}
+.color-div3 {
+    visibility: hidden;
+    position: absolute;
+    top: 55%;
+    left: 55%;
+    height: 2px;
+    width: 30px;
+    border-radius: 50px;
+    background-color: white;
+}
+.color-div4 {
+    visibility: hidden;
+    position: absolute;
+    bottom: 42%;
+    right: 12%;
+    height: 2px;
+    width: 10px;
+    border-radius: 50px;
+    background-color: white;
+}
+.color-div5 {
+    visibility: hidden;
+    position: absolute;
+    height: 4px;
+    width: 60px;
+    border-radius: 50px;
+    background-color: white;
+}
+.color-div6 {
+    visibility: hidden;
+    position: absolute;
+    top: 46%;
+    left: 60%;
+    height: 2px;
+    width: 70px;
+    border-radius: 50px;
+    background-color: white;
+}
+.color-div7 {
+    visibility: hidden;
+    position: absolute;
+    bottom: 45%;
+    left: 10%;
+    height: 2px;
+    width: 10px;
+    border-radius: 50px;
+    background-color: white;
+}
+.color-div8 {
+    visibility: hidden;
+    position: absolute;
+    height: 2px;
+    width: 15px;
+    border-radius: 50px;
+    background-color: white;
+}
+.main-text {
+    display: block;
+    margin: 0 auto;
+    color: whitesmoke;
+    font-size: 80px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.main-text:hover {
+    animation: 0.5s glitch infinite;
+    box-shadow: none;
+}
+.main-text:hover ~ .color-div1{
+    visibility: visible;
+    animation: 0.2s div-glitch infinite;
+}
+.main-text:hover ~ .color-div2{
+    visibility: visible;
+    animation: 0.2s div-glitch infinite;
+}
+.main-text:hover ~ .color-div3{
+    visibility: visible;
+    animation: 0.2s div-glitch infinite;
+}
+.main-text:hover ~ .color-div4{
+    visibility: visible;
+    animation: 0.2s div-glitch infinite;
+}
+.main-text:hover ~ .color-div5{
+    visibility: visible;
+    animation: 0.2s two-glitch infinite;
+}
+.main-text:hover ~ .color-div6{
+    visibility: visible;
+    animation: 0.2s two-glitch infinite;
+}
+.main-text:hover ~ .color-div7{
+    visibility: visible;
+    animation: 0.2s two-glitch infinite;
+}
+.main-text:hover ~ .color-div8{
+    visibility: visible;
+    animation: 0.2s two-glitch infinite;
+}
+
+@keyframes glitch {
+    0% {text-shadow: 7px 2px red , -7px -2px aqua;}
+    12% {text-shadow: none;}
+    25% {text-shadow: 9px 2px red , -7px -2px aqua;}
+    36% {text-shadow: 7px 2px red , -7px -2px aqua;}
+    50% {text-shadow: 10px 2px red , -7px -2px aqua;}
+    62% {text-shadow: 7px 2px red , -10px -2px aqua;}
+    75% {text-shadow: 6px 2px red , -7px -2px aqua;}
+    88% {text-shadow: 7px 2px red , -6px -2px aqua;}
+    100% {text-shadow: 7px 2px red , -10px -2px aqua;}
+}
+@keyframes div-glitch {
+    0% {box-shadow: 7px 4px red , -13px -2px aqua;}
+    25% {box-shadow: 20px 2px red , -10px -2px aqua;}
+    50% {box-shadow: 3px 2px red , -7px -2px aqua;}
+    75% {box-shadow: 13px 6px red , -10px -2px aqua;}
+    100% {box-shadow: 7px 2px red , -10px -2px aqua;}
+}
+@keyframes two-glitch {
+    0% {box-shadow: 7px 2px red , -7px -2px aqua;}
+    12% {box-shadow: 20px 2px red , -9px -2px aqua;}
+    25% {box-shadow: 7px 2px red , -10px -2px aqua;}
+    36% {box-shadow: 12px 2px red , -7px -2px aqua;}
+    50% {box-shadow: none; visibility: hidden;}
+    62% {box-shadow: 7px 2px red , -5px -2px aqua;}
+    75% {box-shadow: 16px 2px red , -12px -2px aqua;}
+    88% {box-shadow: 7px 2px red , -13px -2px aqua;}
+    100% {box-shadow: 20px 2px red , -7px -2px aqua;}
+}
