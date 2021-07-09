@@ -27,6 +27,7 @@ async function getMovies(url) {
     showMovies(data.results)
 }
 
+
 function showMovies(movies) {
     main.innerHTML = ''
 
@@ -37,16 +38,18 @@ function showMovies(movies) {
         movieEl.classList.add('movie')
 
         movieEl.innerHTML = `
-            <img src="${IMG_PATH + poster_path}" alt="${title}">
-            <div class="movie-info">
-          <h3>${title}</h3>
-          <span class="${getClassByRate(vote_average)}">${vote_average}</span>
+            <div onclick="more('${title}')">
+                <img src="${IMG_PATH + poster_path}" alt="${title}">
+                <div class="movie-info">
+                    <h3>${title}</h3>
+                    <span class="${getClassByRate(vote_average)}">${vote_average}</span>
+                </div>
+                <div class="overview">
+                    <h3>Overview</h3>
+                    ${overview}
+                </div>
             </div>
-            <div class="overview">
-          <h3>Overview</h3>
-          ${overview}
-        </div>
-        `
+            `
         main.appendChild(movieEl)
     })
 }
@@ -74,3 +77,8 @@ form.addEventListener('submit', (e) => {
         window.location.reload()
     }
 })
+
+function more(movie){
+    window.location.href='details.html'+'?'+movie;
+}
+
