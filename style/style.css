@@ -236,9 +236,8 @@ header {
 .nav a:hover {
   color: #a80d0d;
   font-weight: bold;
-  border: 1px #fff solid;
-  background-color: #fff;
-  border-radius: 10px;
+  font-size: 20px;
+  background-color: white;
 }
 
 .search {
