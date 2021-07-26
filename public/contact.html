@@ -3,11 +3,35 @@
   <meta charset="utf-8">
   <title>Popcorn - Contact us!</title>
   <link rel="stylesheet" type="text/css" href="./css/contact.css">
-  <link rel="stylesheet" href="../style/index.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <style>
+    .testest{
+      margin-top: 100px;
+      margin-left: 100px;
+      z-index: 10;
+    }
+  </style>
 </head>
 
 <body>
-  <div class="login-root">
+  <nav class="nav-index">
+    <div class="container-index">
+      <h1 class="logo-index"><a href=""></a>Popcorn</a></h1>
+      <ul>
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="movies.html" >Movies</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="genres.html" >Genres</a></li>
+            <li><a href="contact.html" class="current-index">Contact</a></li>
+            
+          </ul>
+        <form id="form">
+          <input type="text" id="search" class="search-index" placeholder="Search">
+        </form>
+      </header>
+    </div>
+  </nav>
+  <div class="login-root login-container">
     <div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
       <div class="loginbackground box-background--white padding-top--64">
         <div class="loginbackground-gridContainer">

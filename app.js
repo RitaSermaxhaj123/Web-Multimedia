@@ -9,8 +9,24 @@ app.use(express.static('public'))
 app.use(express.json())
 
 
-app.get('/',(req,res)=>{
+
+app.get('/home', (req,res)=>{
+    res.sendFile(__dirname + '/public/index.html')
+})
+app.get('/movies', (req,res)=>{
+    res.sendFile(__dirname + '/public/movies.html')
+})
+app.get('movies/:id', (req,res)=>{
+    resizeTo.sendFile(__dirname + '/public/details.html')
+})
+app.get('/contact',(req,res)=>{
     res.sendFile(__dirname + '/public/contact.html')
+})
+app.get('/about', (req,res)=>{
+    res.sendFile(__dirname + '/public/about.html')
+})
+app.get('/genres', (req,res)=>{
+    res.sendFile(__dirname + '/public/genres.html')
 })
 
 app.post('/', (req,res)=>{
